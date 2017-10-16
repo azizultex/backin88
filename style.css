@@ -265,3 +265,8 @@ ul.rap-board-list {
   z-index: 2;
 }
 
+
+/* ===========  Archive Styles  =========== */
+.archive-content-wrap {
+    padding: 45px 0;
+}

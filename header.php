@@ -18,10 +18,10 @@
     				$logo_type = get_field('logo_type', 'options');
     				if($logo_type){
     					$logo_image = get_field('site_logo_image', 'options');
-    					echo '<a class="site-logo image" href="#"><img src="'. $logo_image .'" alt="Logo"></a>';
+    					echo '<a class="site-logo image" href="'. home_url() .'"><img src="'. $logo_image .'" alt="Logo"></a>';
     				} else {
 						$logo_text = get_field('site_logo_text', 'options');
-    					echo '<a class="site-logo" href="#"><h1>'. $logo_text .'</h1></a>';
+    					echo '<a class="site-logo" href="'. home_url() .'"><h1>'. $logo_text .'</h1></a>';
     				}
     				?>
     					
