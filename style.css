@@ -1,0 +1,267 @@
+/*
+Theme Name: Backin88
+Theme URI: http://azizultex.com/backin88
+Description: Just a simple wordpress theme
+Version: 2.01
+Author: Azizul Haque
+Author URI: http://azizultex.com
+Text Domain: backin88
+*/
+
+
+a:hover { text-decoration: none }
+a:focus { outline: 0 solid; text-decoration: none}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1{
+    font-size: 68.4px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif; /* FF3.6-15 */
+    background: -webkit-linear-gradient(#174c9a 0%, #2257a5 40%, #2961ae 63%, #2c5fae 64%, #2d62b2 68%, #2d62b0 70%, #2e63b3 70%, #2e63b1 72%, #2f64b4 73%, #2f64b2 75%, #3065b5 75%, #3065b3 77%, #3166b6 78%, #3166b4 80%, #3267b7 80%, #3267b5 82%, #3368b8 83%, #3368b6 85%, #3469b9 85%, #3469b9 86%, #326ab7 86%, #3568b7 87%, #3469b7 87%, #356aba 87%, #356aba 89%, #336bb8 89%, #366bbb 90%, #366bb9 92%, #376cbc 92%, #396ebe 100%);
+    background: -o-linear-gradient(#174c9a 0%, #2257a5 40%, #2961ae 63%, #2c5fae 64%, #2d62b2 68%, #2d62b0 70%, #2e63b3 70%, #2e63b1 72%, #2f64b4 73%, #2f64b2 75%, #3065b5 75%, #3065b3 77%, #3166b6 78%, #3166b4 80%, #3267b7 80%, #3267b5 82%, #3368b8 83%, #3368b6 85%, #3469b9 85%, #3469b9 86%, #326ab7 86%, #3568b7 87%, #3469b7 87%, #356aba 87%, #356aba 89%, #336bb8 89%, #366bbb 90%, #366bb9 92%, #376cbc 92%, #396ebe 100%);
+    background: linear-gradient(#174c9a 0%, #2257a5 40%, #2961ae 63%, #2c5fae 64%, #2d62b2 68%, #2d62b0 70%, #2e63b3 70%, #2e63b1 72%, #2f64b4 73%, #2f64b2 75%, #3065b5 75%, #3065b3 77%, #3166b6 78%, #3166b4 80%, #3267b7 80%, #3267b5 82%, #3368b8 83%, #3368b6 85%, #3469b9 85%, #3469b9 86%, #326ab7 86%, #3568b7 87%, #3469b7 87%, #356aba 87%, #356aba 89%, #336bb8 89%, #366bbb 90%, #366bb9 92%, #376cbc 92%, #396ebe 100%); 
+}           
+
+
+
+
+/*===============   Header Styles  ==============*/
+.header-content {
+    border-bottom: 7px solid #fff;
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+}
+.site-logo{
+    display: block;
+    color: #fff;
+}
+.site-logo.image {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.site-logo:hover,
+.site-logo:focus {
+    color: #fff;
+}
+.site-logo h1 {
+    margin-bottom: 0;
+}
+.menu-icon {
+    right: 0;
+    position: absolute;
+    top: calc(50% - 9px);
+    cursor: pointer;
+    z-index: 999;
+}
+.icon_bar {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.menu-icon.active .top {
+    -webkit-transform: translateY(5px) translateX(0) rotate(45deg);
+    transform: translateY(5px) translateX(0) rotate(45deg);
+    background: #FFF;
+}
+.menu-icon.active .middle {
+    opacity: 0;
+    background: #FFF;
+}
+.menu-icon.active .bottom {
+    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #FFF;
+} 
+
+body.fixed {
+    overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 99;
+}
+.overlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open li {
+  -webkit-animation: fadeInRight .5s ease forwards;
+          animation: fadeInRight .5s ease forwards;
+  -webkit-animation-delay: .35s;
+          animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  -webkit-animation-delay: .45s;
+          animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  -webkit-animation-delay: .50s;
+          animation-delay: .50s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.overlay ul li {
+  display: block;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, 
+.overlay ul li a:focus:after, 
+.overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+
+
+
+
+/* =============  Homepage Content Styles  ========== */
+.home-content-wrap {
+    padding: 45px 0;
+}
+ul.rap-board-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -40px;
+}
+.rap-board-list li {
+    margin: 25px 0 25px 40px;
+    width: 91px;
+}
+.rap-board-list li img {
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .8s ease-in-out;  
+}
+.rap-board-list li img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01);
+}
+.rap-board-list .tooltip-inner {
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+/* ==============  Footer Styles  ============== */
+.copyright-text {
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    border-top: 7px solid #fff;
+}
+
+
+
+.BG {
+  background-image: url("BG.png");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1920px;
+  height: 1574px;
+  z-index: 2;
+}
+
