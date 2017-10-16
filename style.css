@@ -228,6 +228,7 @@ ul.rap-board-list {
 .rap-board-list li {
     margin: 25px 0 25px 40px;
     width: 91px;
+    cursor: pointer;
 }
 .rap-board-list li img {
     /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
