@@ -222,9 +222,72 @@ function backin88_post_types_init() {
 
 
 
+    //Register Stock Image Post Type
+    $labels = array(
+        'name'                  => _x( 'Stock Images', 'Post Type General Name', 'scenecreek' ),
+        'singular_name'         => _x( 'Stock Image', 'Post Type Singular Name', 'scenecreek' ),
+        'menu_name'             => __( 'Stock Images', 'scenecreek' ),
+        'name_admin_bar'        => __( 'Stock Image', 'scenecreek' ),
+        'archives'              => __( 'Stock Images Archives', 'scenecreek' ),
+        'attributes'            => __( 'Stock image attributes', 'scenecreek' ),
+        'parent_item_colon'     => __( 'Parent Stock Images:', 'scenecreek' ),
+        'all_items'             => __( 'All Stock Images', 'scenecreek' ),
+        'add_new_item'          => __( 'Add New Stock Image', 'scenecreek' ),
+        'add_new'               => __( 'Add New Stock Image', 'scenecreek' ),
+        'new_item'              => __( 'New stock image', 'scenecreek' ),
+        'edit_item'             => __( 'Edit stock image', 'scenecreek' ),
+        'update_item'           => __( 'Update stock image', 'scenecreek' ),
+        'view_item'             => __( 'View stock image', 'scenecreek' ),
+        'view_items'            => __( 'View stock images', 'scenecreek' ),
+        'search_items'          => __( 'Search stock images', 'scenecreek' ),
+        'not_found'             => __( 'No Stock Image found', 'scenecreek' ),
+        'not_found_in_trash'    => __( 'No stock images in Trash', 'scenecreek' ),
+        'featured_image'        => __( 'Stock image', 'scenecreek' ),
+        'set_featured_image'    => __( 'Set stock images', 'scenecreek' ),
+        'remove_featured_image' => __( 'Remove stock images', 'scenecreek' ),
+        'use_featured_image'    => __( 'Use as stock images', 'scenecreek' ),
+        'insert_into_item'      => __( 'Insert into stock images', 'scenecreek' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this Stock Image', 'scenecreek' ),
+        'items_list'            => __( 'Stock images list', 'scenecreek' ),
+        'items_list_navigation' => __( 'Stock images navigation', 'scenecreek' ),
+        'filter_items_list'     => __( 'Filter stock images', 'scenecreek' ),
+    );
+    $args = array(
+        'label'                 => __( 'Stock Images', 'scenecreek' ),
+        'description'           => __( 'Post Type Description', 'scenecreek' ),
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'thumbnail', ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_position'         => 5,
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => true,
+        'can_export'            => true,
+        'has_archive'           => false,       
+        'exclude_from_search'   => true,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'page',
+    );
+    register_post_type( 'stock_featured_image', $args );
+
 
 }
 
+
+/* set project client */
+/*function set_post_featured_image_from_acf_field( $post_id ) {
+    if( $_POST['post_type'] === 'rapper' ) {
+        
+        if( !empty( $_POST['acf'] ) && isset( $_POST['acf']['field_58fb9743ec075'] ) ) {
+            $post_thumbnail_id = get_post_thumbnail_id( $_POST['acf']['field_58fb9743ec075'] );
+            set_post_thumbnail( $post_id, $post_thumbnail_id); 
+        }
+        return;
+    }
+}
+add_action('acf/save_post', 'set_post_featured_image_from_acf_field', 20);*/
 
 
 

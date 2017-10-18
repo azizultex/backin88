@@ -31,22 +31,5 @@
 	});
 
 
-	// var rappers = document.querySelectorAll('.rapper');
-
-	// $('.rapper').on('click', function(e){
-
-	// 	var audioMap = new Map();
-
-	// 	var sound = new Audio($(this).data('audio'));
-	// 	sound.play();
-	// 	audioMap.set(this, sound);
-
-	// 	audioMap.forEach(function(audio){
-	// 		console.log(audio);
-	// 		if()
-	// 		audio.pause();
-	// 	});
-
-	// });
 
 }(jQuery));	
