@@ -276,18 +276,15 @@ function backin88_post_types_init() {
 }
 
 
-/* set project client */
-/*function set_post_featured_image_from_acf_field( $post_id ) {
-    if( $_POST['post_type'] === 'rapper' ) {
-        
-        if( !empty( $_POST['acf'] ) && isset( $_POST['acf']['field_58fb9743ec075'] ) ) {
-            $post_thumbnail_id = get_post_thumbnail_id( $_POST['acf']['field_58fb9743ec075'] );
-            set_post_thumbnail( $post_id, $post_thumbnail_id); 
-        }
-        return;
-    }
+//add SVG to allowed file uploads
+function add_file_types_to_uploads($file_types){
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes );
+
+    return $file_types;
 }
-add_action('acf/save_post', 'set_post_featured_image_from_acf_field', 20);*/
+add_action('upload_mimes', 'add_file_types_to_uploads');
 
 
 
