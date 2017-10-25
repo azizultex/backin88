@@ -287,8 +287,25 @@ function add_file_types_to_uploads($file_types){
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
 
+$bg_color = get_field('background_color', 'options');
+if($bg_color) {
+    add_action('wp_head', 'backin88_custom_background_color');
+    function backin88_custom_background_color(){
+        $bg_color = get_field('background_color', 'options');
+        echo '
+        <style type="text/css">
+            body{background-color: '. $bg_color .';}
+        </style>
+        ';
+    }
+}
+
+
+
 
 require get_template_directory() . '/inc/required_plugins.php';
+
+
 
 
 

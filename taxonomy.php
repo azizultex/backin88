@@ -15,10 +15,11 @@
 					<?php 
 					if(have_posts()) : while(have_posts()) : the_post();
 
-						$image = get_field('rapper_image');
+						$post_id = get_field('stock_featured_images');
+                        $image = get_the_post_thumbnail($post_id[0], 'full');
 						$audio = get_field('rapper_audio');
 					?>
-                    	<li class="rapper" data-toggle="tooltip" data-audio="<?php echo $audio; ?>" title="<?php the_title(); ?>"><img src="<?php echo $image; ?>" alt=""></li>
+                    	<li class="rapper" data-toggle="tooltip" data-audio="<?php echo $audio; ?>" title="<?php the_title(); ?>"><?php echo $image; ?></li>
                     <?php  
                     	endwhile;
                     else : ?>
