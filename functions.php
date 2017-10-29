@@ -288,13 +288,19 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
 
 
 $bg_color = get_field('background_color', 'options');
-if($bg_color) {
+$bg_image = get_field('background_image', 'options');
+if($bg_color || $bg_image) {
     add_action('wp_head', 'backin88_custom_background_color');
     function backin88_custom_background_color(){
         $bg_color = get_field('background_color', 'options');
+        $bg_image = get_field('background_image', 'options');
         echo '
         <style type="text/css">
-            body{background-color: '. $bg_color .';}
+            body{
+                background-color: '. $bg_color .';
+                background-image: url('. $bg_image .');
+                background-repeat: repeat-x;
+            }
         </style>
         ';
     }
