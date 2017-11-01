@@ -148,29 +148,29 @@ if(function_exists('acf_add_options_page')) {
 }
 
 
-//Register Rapper Post Type
+//Register Sound Post Type
 add_action( 'init', 'backin88_post_types_init' );
 /**
- * Register a book post type.
+ * Register a sound post type.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */
 function backin88_post_types_init() {
     $labels = array(
-        'name'               => _x( 'Rappers', 'post type general name', 'backin88' ),
-        'singular_name'      => _x( 'Rapper', 'post type singular name', 'backin88' ),
-        'menu_name'          => _x( 'Rappers', 'admin menu', 'backin88' ),
-        'name_admin_bar'     => _x( 'Rapper', 'add new on admin bar', 'backin88' ),
+        'name'               => _x( 'Sounds', 'post type general name', 'backin88' ),
+        'singular_name'      => _x( 'Sound', 'post type singular name', 'backin88' ),
+        'menu_name'          => _x( 'Sounds', 'admin menu', 'backin88' ),
+        'name_admin_bar'     => _x( 'Sound', 'add new on admin bar', 'backin88' ),
         'add_new'            => _x( 'Add New', 'rapper', 'backin88' ),
-        'add_new_item'       => __( 'Add New Rapper', 'backin88' ),
-        'new_item'           => __( 'New Rapper', 'backin88' ),
-        'edit_item'          => __( 'Edit Rapper', 'backin88' ),
-        'view_item'          => __( 'View Rapper', 'backin88' ),
-        'all_items'          => __( 'All Rappers', 'backin88' ),
-        'search_items'       => __( 'Search Rappers', 'backin88' ),
-        'parent_item_colon'  => __( 'Parent Rappers:', 'backin88' ),
-        'not_found'          => __( 'No rappers found.', 'backin88' ),
-        'not_found_in_trash' => __( 'No rappers found in Trash.', 'backin88' )
+        'add_new_item'       => __( 'Add New Sound', 'backin88' ),
+        'new_item'           => __( 'New Sound', 'backin88' ),
+        'edit_item'          => __( 'Edit Sound', 'backin88' ),
+        'view_item'          => __( 'View Sound', 'backin88' ),
+        'all_items'          => __( 'All Sounds', 'backin88' ),
+        'search_items'       => __( 'Search Sounds', 'backin88' ),
+        'parent_item_colon'  => __( 'Parent Sounds:', 'backin88' ),
+        'not_found'          => __( 'No sounds found.', 'backin88' ),
+        'not_found_in_trash' => __( 'No sounds found in Trash.', 'backin88' )
     );
 
     $args = array(
@@ -181,12 +181,12 @@ function backin88_post_types_init() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'rapperss' ),
+        'rewrite'            => array( 'slug' => 'rapper' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'menu_icon'          => 'dashicons-businessman',
+        'menu_icon'          => 'dashicons-controls-volumeon',
         'supports'           => array( 'title' )
     );
 
@@ -194,19 +194,19 @@ function backin88_post_types_init() {
 
 
 
-    // Register Rapper Type Taxonomy
+    // Register Sound Type Taxonomy
     $labels = array(
-        'name'              => _x( 'Rapper Types', 'taxonomy general name', 'textdomain' ),
-        'singular_name'     => _x( 'Rapper Type', 'taxonomy singular name', 'textdomain' ),
-        'search_items'      => __( 'Search Rapper Types', 'textdomain' ),
-        'all_items'         => __( 'All Rapper Types', 'textdomain' ),
-        'parent_item'       => __( 'Parent Rapper Type', 'textdomain' ),
-        'parent_item_colon' => __( 'Parent Rapper Type:', 'textdomain' ),
-        'edit_item'         => __( 'Edit Rapper Type', 'textdomain' ),
-        'update_item'       => __( 'Update Rapper Type', 'textdomain' ),
-        'add_new_item'      => __( 'Add New Rapper Type', 'textdomain' ),
-        'new_item_name'     => __( 'New Rapper Type Name', 'textdomain' ),
-        'menu_name'         => __( 'Rapper Type', 'textdomain' ),
+        'name'              => _x( 'Sound Types', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Sound Type', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Search Sound Types', 'textdomain' ),
+        'all_items'         => __( 'All Sound Types', 'textdomain' ),
+        'parent_item'       => __( 'Parent Sound Type', 'textdomain' ),
+        'parent_item_colon' => __( 'Parent Sound Type:', 'textdomain' ),
+        'edit_item'         => __( 'Edit Sound Type', 'textdomain' ),
+        'update_item'       => __( 'Update Sound Type', 'textdomain' ),
+        'add_new_item'      => __( 'Add New Sound Type', 'textdomain' ),
+        'new_item_name'     => __( 'New Sound Type Name', 'textdomain' ),
+        'menu_name'         => __( 'Sound Type', 'textdomain' ),
     );
 
     $args = array(
