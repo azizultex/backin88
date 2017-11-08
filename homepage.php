@@ -17,6 +17,7 @@
 						'post_type' => 'rapper',
 						'posts_per_page' => -1,
                         'orderby' => 'title',
+                        'order' => 'ASC'
 
 					);
 					$loop = new WP_Query($args);
@@ -28,13 +29,9 @@
 
 						$audio = get_field('rapper_audio');
                         $desc = get_field('rapper_description');
-                        if($desc){
-                            $title = get_the_title() . '<br>' . $desc;
-                        } else {
-                            $title = get_the_title();
-                        }
+                        $title = get_the_title();
 					?>
-                    	<li class="rapper" data-toggle="tooltip" data-audio="<?php echo $audio; ?>" title="<?php echo $title; ?>"><?php echo $image; ?></li>
+                    	<li class="rapper" data-toggle="tooltip" data-audio="<?php echo $audio; ?>" title="<?php echo $desc ? $desc : $title; ?>"><?php echo $image; ?></li>
                     <?php  
                     	endwhile;
                     else : ?>
