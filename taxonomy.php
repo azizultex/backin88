@@ -13,8 +13,17 @@
                 <div class="archive-content-wrap">
                 	<ul class="rap-board-list">
 					<?php 
+                    $obj = get_queried_object();
+                    $tax_slug = $obj->slug;
                     $args = array(
                         'post_type' => 'rapper',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'rapper_type',
+                                'field'    => 'slug',
+                                'terms'    => $tax_slug,
+                            ),
+                        ),
                         'posts_per_page' => -1,
                         'orderby' => 'title',
                         'order' => 'ASC'
